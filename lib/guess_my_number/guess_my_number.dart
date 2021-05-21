@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: const Text("Ok."),
                       onPressed: () {
                         Navigator.of(context, rootNavigator: true)
-                            .pop('dialog');
+                            .pop("Dialog");
                       },
                     ),
                     TextButton(
