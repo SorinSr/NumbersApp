@@ -1,16 +1,9 @@
-# demo_app_3
+Numbers apps, NOW including Guess my number and Number shape! Incredible useless and just for demo.
 
-A new Flutter project.
 
-## Getting Started
+Guess my number:
+![Capture1](https://user-images.githubusercontent.com/47916325/119145448-50c36780-ba52-11eb-8287-121bde41fb5a.PNG)
+![Capture2](https://user-images.githubusercontent.com/47916325/119145456-53be5800-ba52-11eb-8601-466160afdfcc.PNG)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Number shape:
+![Capture3](https://user-images.githubusercontent.com/47916325/119145481-5ae56600-ba52-11eb-8002-d8ed58d85437.PNG)
