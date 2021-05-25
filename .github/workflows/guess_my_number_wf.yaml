@@ -2,7 +2,7 @@ name: Check code quality for Guess my Number
 on:
   push:
     paths:
-      - lib/guess_my_number/**
+      - guess_my_number/**
 jobs:
   format-code:
     runs-on: ubuntu-latest
@@ -28,9 +28,9 @@ jobs:
           flutter-version: '2.2.0'
       - name: Setup project
         run: |
-          cd lib/guess_my_number
+          cd guess_my_number
           flutter pub get
       - name: Analyze code
         run: |
-          cd lib/guess_my_number
+          cd guess_my_number
           flutter analyze
