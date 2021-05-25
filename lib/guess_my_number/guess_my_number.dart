@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -39,10 +39,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController _myController1 = new TextEditingController();
   String _stringHint = "Test Hint Text";
-
-  // void _increment() {
-  //   setState(() {});
-  // }
 
   @override
   void dispose() {
@@ -75,15 +71,13 @@ class _MyHomePageState extends State<MyHomePage> {
                     TextButton(
                       child: const Text("Ok."),
                       onPressed: () {
-                        Navigator.of(context, rootNavigator: true)
-                            .pop("Dialog");
+                        Navigator.of(context, rootNavigator: true).pop("Dialog");
                       },
                     ),
                     TextButton(
                       child: const Text("Reset"),
                       onPressed: () {
-                        Navigator.of(context, rootNavigator: true)
-                            .pop('dialog');
+                        Navigator.of(context, rootNavigator: true).pop('dialog');
                         _myController1.clear();
                         main();
                       },
@@ -141,8 +135,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          EdgeInsets.symmetric(vertical: 2, horizontal: 45),
+                      padding: EdgeInsets.symmetric(vertical: 2, horizontal: 45),
                       child: TextFormField(
                         keyboardType: TextInputType.number,
                         controller: _myController1,
@@ -152,18 +145,15 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
                         TextButton(
-                          child: const Text("Guess",
-                              style: TextStyle(fontSize: 16)),
+                          child: const Text("Guess", style: TextStyle(fontSize: 16)),
                           onPressed: () {
                             setState(() {
                               _stringHint = validateNumber(
-                                  userNumber:
-                                      int.parse(_myController1.text.toString()),
+                                  userNumber: int.parse(_myController1.text.toString()),
                                   generatedNumber: _generatedNumber);
                               showAlertWindow();
                             });
-                            print("Guessed number by user is : " +
-                                _myController1.text.toString());
+                            print("Guessed number by user is : " + _myController1.text.toString());
                           },
                         ),
                         IconButton(

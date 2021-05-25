@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
   @override
@@ -27,9 +27,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   final TextEditingController _myController1 = new TextEditingController();
-
 
   // void _increment() {
   //   setState(() {});
@@ -65,10 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     borderRadius: BorderRadius.all(Radius.circular(24)),
                     borderSide: BorderSide(width: 1, color: Colors.blueGrey),
                   ),
-                  labelStyle: TextStyle(
-                      color: myFocusNode.hasFocus
-                          ? Colors.grey
-                          : Colors.blueAccent),
+                  labelStyle: TextStyle(color: myFocusNode.hasFocus ? Colors.grey : Colors.blueAccent),
                   labelText: "Number ::",
                 ),
                 keyboardType: TextInputType.number,
@@ -83,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
           showDialog(
               context: context,
               builder: (context) {
-                return AlertDialog(content: Text(getNumberShape(numberString : _myController1.text.toString())));
+                return AlertDialog(content: Text(getNumberShape(numberString: _myController1.text.toString())));
               });
         },
         tooltip: 'Increment',

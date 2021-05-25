@@ -1,12 +1,7 @@
-import 'package:flutter/cupertino.dart';
-
 bool showAlert = false;
 
-String validateNumber({int userNumber, int generatedNumber}) {
-  print("From metoda aia barosana care valideaza => " +
-      userNumber.toString() +
-      " " +
-      generatedNumber.toString());
+String validateNumber({required int userNumber, required int generatedNumber}) {
+  print("From metoda aia barosana care valideaza => " + userNumber.toString() + " " + generatedNumber.toString());
 
   if (userNumber == generatedNumber) {
     print("User guessed correctly!!");
@@ -21,7 +16,4 @@ String validateNumber({int userNumber, int generatedNumber}) {
   } else {
     return "Un predicted case! ☠";
   }
-
 }
-
-
