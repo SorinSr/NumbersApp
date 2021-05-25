@@ -27,10 +27,8 @@ jobs:
         with:
           flutter-version: '2.2.0'
       - name: Setup project
-        run: |
-#          cd guess_my_number
+        run:
           flutter pub get
       - name: Analyze code
-        run: |
-#          cd guess_my_number
+        run:
           flutter analyze
