@@ -1,7 +1,8 @@
 name: Check code quality for Guess my Number
 on:
   push:
-    paths: guess_my_number/**
+  paths:
+    - guess_my_number/**
 jobs:
   format-code:
     runs-on: ubuntu-latest
