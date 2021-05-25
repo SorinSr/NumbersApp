@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      source-directory: ./guess_my_number
+      source-directory: lib/number_shape
 
     steps:
       - name: Get code
@@ -30,9 +30,9 @@ jobs:
         with:
           flutter-version: '2.2.0'
       - name: Setup project
-        run: flutter pub get
         working-directory: ${{env.source-directory}}
+        run: flutter pub get
 
       - name: Analyze code
-        run: flutter analyze
         working-directory: ${{env.source-directory}}
+        run: flutter analyze
