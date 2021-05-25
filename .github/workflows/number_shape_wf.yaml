@@ -1,36 +1,36 @@
-name: Check code quality for Number Shape
-on:
-  push:
-    paths:
-      - number_shape/**
-jobs:
-  format-code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v2
-      - name: Install flutter
-        uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '2.2.0'
-      - name: Setup project
-        run: flutter pub get
-      - name: Format code
-        run: flutter format -l 120 --set-exit-if-changed .
-  analyze-code:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v2
-      - name: Install Flutter
-        uses: subosito/flutter-action@v1
-        with:
-          flutter-version: '2.2.0'
-      - name: Setup project
-        run: |
-          cd number_shape
-          flutter pub get
-      - name: Analyze code
-        run: |
-          cd number_shape
-          flutter analyze
+#name: Check code quality for Number Shape
+#on:
+#  push:
+#    paths:
+#      - number_shape/**
+#jobs:
+#  format-code:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Get code
+#        uses: actions/checkout@v2
+#      - name: Install flutter
+#        uses: subosito/flutter-action@v1
+#        with:
+#          flutter-version: '2.2.0'
+#      - name: Setup project
+#        run: flutter pub get
+#      - name: Format code
+#        run: flutter format -l 120 --set-exit-if-changed .
+#  analyze-code:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Get code
+#        uses: actions/checkout@v2
+#      - name: Install Flutter
+#        uses: subosito/flutter-action@v1
+#        with:
+#          flutter-version: '2.2.0'
+#      - name: Setup project
+#        run: |
+#          cd number_shape
+#          flutter pub get
+#      - name: Analyze code
+#        run: |
+#          cd number_shape
+#          flutter analyze
