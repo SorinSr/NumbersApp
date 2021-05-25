@@ -1,4 +1,4 @@
-name: Check code quality
+name: Check code quality for Guess my number
 on:
   push:
     paths:
