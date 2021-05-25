@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      source-directory: ./lib/guess_my_number
+      source-directory: ./guess_my_number
 
     steps:
       - name: Get code
