@@ -1,4 +1,4 @@
-name: Check code quality
+name: Check code quality for Number Shape
 on:
   push:
     paths:
