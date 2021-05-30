@@ -37,6 +37,6 @@ jobs:
       - name: Setup project
         run: flutter pub get
 
-      - name: Analyze code
+      - name:  Analyze code
         working-directory: ${{env.source-directory}}
         run: flutter analyze

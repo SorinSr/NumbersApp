@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      source-directory: lib/guess_my_number
+      source-directory: lib/number_shape
 
     steps:
       - name: Get code
