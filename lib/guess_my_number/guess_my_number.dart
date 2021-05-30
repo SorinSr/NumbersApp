@@ -23,13 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.lightGreen,
       ),
-
-
-                          home:      MyHomePage(title:
-                          'Guess my number'),
-
-                        );
-                      }
+      home: MyHomePage(title: 'Guess my number'),
+    );
+  }
 }
 
 class MyHomePage extends StatefulWidget {
