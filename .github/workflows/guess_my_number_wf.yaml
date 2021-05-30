@@ -20,8 +20,7 @@ jobs:
         run:  flutter pub get
       - name: Format code
         working-directory: ${{env.source-directory}}
-        run: |
-        cd ${{env.source-directory}} flutter format -l 120 --set-exit-if-changed .
+        run: flutter format -l 120 --set-exit-if-changed .
   analyze-code:
     runs-on: ubuntu-latest
 
@@ -40,5 +39,4 @@ jobs:
 
       - name: Analyze code
         working-directory: ${{env.source-directory}}
-        run: |
-        cd ${{env.source-directory}} flutter analyze
+        run: flutter analyze
