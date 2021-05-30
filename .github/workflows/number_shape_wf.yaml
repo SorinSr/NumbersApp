@@ -17,13 +17,14 @@ jobs:
         with:
           flutter-version: '2.2.0'
       - name: Setup project
-        run: |
-        cd ${{env.source-directory}}
-        flutter pub get
+        run:  flutter pub get
+
       - name: Format code
+        working-directory: ${{env.source-directory}}
         run: |
         cd ${{env.source-directory}}
         flutter format -l 120 --set-exit-if-changed .
+
   analyze-code:
     runs-on: ubuntu-latest
 
@@ -38,10 +39,7 @@ jobs:
         with:
           flutter-version: '2.2.0'
       - name: Setup project
-        working-directory: ${{env.source-directory}}
-        run: |
-        cd ${{env.source-directory}}
-        flutter pub get
+        run:  flutter pub get
 
       - name: Analyze code
         working-directory: ${{env.source-directory}}
